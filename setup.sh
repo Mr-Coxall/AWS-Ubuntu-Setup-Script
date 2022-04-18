@@ -54,6 +54,10 @@ sudo pip3 install --upgrade requests
 sudo apt install vim-youcompleteme -y
 vim-addon-manager install youcompleteme
 
+# load g++ tools
+echo load build-essential
+sudo apt install build-essential -y
+
 # load java programming software
 echo load Java
 sudo apt install default-jdk -y
@@ -108,6 +112,3 @@ echo ---
 echo rebooting now ...
 echo ---
 sudo reboot now
-
-
-
