@@ -8,4 +8,3 @@ You will need to change permissions on the setup.sh file before you can run it
 ### chmod +x ./load.sh
 
 Then at the end, reboot for everything to take effect
-### sudo reboot now

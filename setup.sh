@@ -7,7 +7,6 @@
 # sudo reboot now
 
 
-
 # update and upgrade system
 echo Update and upgrade system
 sudo apt-get update -y
@@ -103,6 +102,22 @@ echo "--- Copying plugin to Vim bundles.."
 cp -r ./swift/utils/vim ~/.vim/pack/bundle/start/swift
 # echo "--- Cleaning up, removing swift repo.."
 # rm -rf ./swift/
+
+# update Git
+echo upgrade Git
+sudo add-apt-repository ppa:git-core/ppa
+sudo apt-get update
+sudo apt-get install -y git
+
+# load GitHub CLI
+echo load GitHub CLI
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
+sudo apt-add-repository https://cli.github.com/packages
+sudo apt install gh
+
+gh auth login
+
+sudo apt install tmux
 
 # then remove the dot_files firectory 
 sudo rm -R ~/dot_files
